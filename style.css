@@ -6,11 +6,15 @@
     padding: 0;
 }
 
+/* ============= Responsive for maximum width ========== */
+body {
+    max-width: 1440px;
+}
 /* ================-=Header==================== */
 header {
     background-color: rgba(255, 144, 14, .1);
     width: 100%;
-    
+
 }
 
 nav {
@@ -24,18 +28,19 @@ nav {
 
 nav h1 {
     font-weight: 700px;
-    font-size: 45px;
+    font-size: 2em;
 }
 
 .menus {
     display: flex;
-    font-weight: 500;
+    font-size: 1em;
     color: #424242;
     line-height: 26px;
+    width: 30%;
 }
 
 .menu {
-    margin-left: 50px;
+    margin-left: 10%;
 }
 
 .intro {
@@ -43,8 +48,8 @@ nav h1 {
 }
 
 .intro h2 {
-    font-size: 66px;
-    font-weight: 700px;
+    font-size: 3em;
+    font-weight: 700;
     line-height: 77px;
     margin-top: 70px;
     margin-bottom: 30px;
@@ -71,7 +76,7 @@ button {
     margin: 0 auto;
     padding: 30px 100px;
 }
-  
+
 .banner img {
     width: 100%;
 }
@@ -82,14 +87,21 @@ button {
     display: flex;
     margin: 30px 100px;
     align-items: center;
+
 }
 
 .quick-list .images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin: 30px;
+    margin: 10px;
     grid-area: auto;
+    transform: scale(0.80);
+}
+
+.quick-list-des {
+    color: #727272;
+    margin: 20px 0px;
 }
 
 /* ================= Features ==================== */
@@ -104,7 +116,7 @@ button {
     max-width: 36vw;
 }
 
-.features-text-main h2{
+.features-text-main h2 {
     font-size: 45px;
     font-weight: 700px;
 }
@@ -119,7 +131,8 @@ button {
     margin-right: 20px;
 }
 
-.features-text-main-des, .feature-list-des {
+.features-text-main-des,
+.feature-list-des {
     color: #727272;
 }
 
@@ -132,16 +145,17 @@ button {
     padding: 30px;
 }
 
-.features-image img{
+.features-image img {
     max-width: 38vw;
 }
 
 .ten-years {
     text-align: center;
-    position: relative;
+    /* position: relative;
     bottom: 120px;
     padding-bottom: 0;
-    margin-left: 10vw;
+    margin-left: 10vw; */
+    transform: translate(20px, -110px);
 }
 
 .ten-years button {
@@ -155,13 +169,57 @@ button {
     line-height: 22px;
 }
 
+/* ================= Hire Us ================== */
+
+.hire-us {
+    background-color: rgba(255, 144, 14, .1);
+    color: #000000;
+    margin: 0px 100px 60px;
+    padding: 80px 0;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hire-us ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.hire-us li {
+    margin-bottom: 10px;
+}
+
+.hire-us h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hire-us input, .hire-us textarea {
+    width: 80%;
+    min-width: 230px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.hire-us button {
+    background-color: #FF900E;
+    color: #FFFFFF;
+}
+
 /* ============= Facts ============ */
 
 .facts {
     margin: 0px 100px;
 }
 
-.facts h2{
+.facts h2 {
     font-weight: 700;
     font-size: 40px;
     margin-bottom: 20px;
@@ -176,7 +234,7 @@ button {
 .icons {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 100px;
     margin-bottom: 60px;
 }
 
@@ -186,8 +244,20 @@ button {
     justify-content: center;
     border: 1px solid #FF900E;
     border-radius: 6px;
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
+    align-items: center;
+    transition: width .2s linear, height 1s linear; 
+}
+
+.icon:hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #43d604;
+    border-radius: 8px;
+    width: 170px;
+    height: 170px;
     align-items: center;
 }
 
@@ -196,8 +266,17 @@ button {
     margin: 0 auto;
 }
 
-.icon p {
+.icon .number {
     text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    margin-top: 6px;
+}
+
+.icon .text {
+    text-align: center;
+    font-size: 16px;
+    color: #727272;
 }
 
 /* ================= Sponsors ==================== */
@@ -208,7 +287,7 @@ button {
     margin-bottom: 30px;
 }
 
-.sponsor h2{
+.sponsor h2 {
     font-weight: 700;
     font-size: 40px;
     margin-bottom: 20px;
@@ -225,10 +304,19 @@ button {
     justify-content: space-around;
 }
 
+.logo img {
+    filter: grayscale(100%);
+    width: 90%;
+}
+
 .footer {
     background-color: rgba(255, 144, 14, .1);
-    width: 100%;
+    width: 90%;
     height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0px;
 }
 
 .footer p {
@@ -237,4 +325,73 @@ button {
 
 .hide {
     display: none;
+}
+
+
+@media screen and (max-width: 576px) {
+
+nav {
+    flex-direction: column;
+}
+
+nav .menus {
+    width: 80%;
+}
+nav .menu {
+    margin-left: 8px;
+}
+
+.quick-list {
+    flex-direction: column;
+}
+
+.quick-list .images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features {
+    flex-direction: column;
+}
+
+.ten-years {
+    margin-bottom: 30px;
+}
+
+.features-text, .features-image img{
+    max-width: 60vw;
+}
+
+.ten-years {
+    transform: none;
+}
+
+.container {
+    flex-direction: column;
+}
+
+.icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logos {
+    flex-direction: column;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 70%;
+    margin-bottom: 10%;
+}
+
+.footer {
+    margin: 0 20px;
+}
+
 }
